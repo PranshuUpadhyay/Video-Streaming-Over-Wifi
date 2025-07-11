@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Streaming Over WiFi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-video"></i> Video Streaming Over WiFi</h1>
+            <p>Stream videos to any device on your network</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Upload Section -->
+            <section class="upload-section">
+                <h2><i class="fas fa-cloud-upload-alt"></i> Upload Video</h2>
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-content">
+                        <i class="fas fa-file-video upload-icon"></i>
+                        <p>Drag & drop video files here or click to browse</p>
+                        <p class="upload-hint">Supported formats: MP4, AVI, MOV, MKV, WMV, FLV, WebM, M4V (Max: 2GB)</p>
+                        <input type="file" id="fileInput" accept="video/*" multiple style="display: none;">
+                        <button class="upload-btn" onclick="document.getElementById('fileInput').click()">
+                            <i class="fas fa-folder-open"></i> Choose Files
+                        </button>
+                    </div>
+                </div>
+                <div id="uploadProgress" class="upload-progress" style="display: none;">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p id="progressText">Uploading...</p>
+                </div>
+            </section>
+
+            <!-- Video Library Section -->
+            <section class="video-library">
+                <h2><i class="fas fa-film"></i> Video Library</h2>
+                <div class="video-grid" id="videoGrid">
+                    <div class="loading">Loading videos...</div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Video Player Modal -->
+        <div id="videoModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modalTitle">Video Player</h3>
+                    <span class="close" onclick="closeVideoModal()">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <video id="videoPlayer" controls>
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://www.watchdog.mom/track.js" data-site="c0c405a9-e094-4b71-b878-1795b4759b59"></script>
+</body>
+</html> 

@@ -1,0 +1,29 @@
+{
+  "name": "video-streaming",
+  "version": "1.0.0",
+  "description": "Video Streaming Website Using Wifi",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PranshuUpadhyay/Video-Streaming-Over-Wifi.git"
+  },
+  "author": "Pranshu Upadhyay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PranshuUpadhyay/Video-Streaming-Over-Wifi/issues"
+  },
+  "homepage": "https://github.com/PranshuUpadhyay/Video-Streaming-Over-Wifi#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "multer": "^1.4.5-lts.1",
+    "fs-extra": "^11.1.1",
+    "path": "^0.12.7",
+    "nodemon": "^3.1.9"
+  }
+}
